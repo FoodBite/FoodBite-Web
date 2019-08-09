@@ -44,7 +44,7 @@
     <meta name="google-signin-client_id"
         content="96550195453-uuol9trhtsvego1u8a43m4s0rqumd43b.apps.googleusercontent.com">
     <br><br>
-    <a href="#" onclick="signOut();">Sign out</a> <button class="btn btn-success text-light">alert</button>
+    <a href="#" onclick="signOut();">Sign out</a> <button class="btn btn-success text-light" onclick="greet();">alert</button>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script>
@@ -62,6 +62,10 @@
             auth2.signOut().then(function () {
                 console.log('User signed out.');
             });
+        }
+        function greet()
+        {
+            alert(profile.getName());
         }
     </script>
 </body>
