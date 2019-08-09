@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id" content="96550195453-uuol9trhtsvego1u8a43m4s0rqumd43b.apps.googleusercontent.com">
+    <link rel="shortcut icon" href="./burger.ico" type="image/x-icon">
+    <title>Food Bite</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <a class="navbar-brand">Brand</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Item 2</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+    <br><br>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
+    <meta name="google-signin-client_id" content="96550195453-uuol9trhtsvego1u8a43m4s0rqumd43b.apps.googleusercontent.com">
+    <br><br> 
+    <a href="#" onclick="signOut();">Sign out</a>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>    
+
+    <script>
+        // gapi.auth2.init({client_id: '96550195453-uuol9trhtsvego1u8a43m4s0rqumd43b.apps.googleusercontent.com'});
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+    </script>
+</body>
+</html>
