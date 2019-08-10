@@ -38,7 +38,7 @@
     </nav>
     <br><br>
     <br><br>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="g-signin2 ml-5" data-onsuccess="onSignIn"></div>
     <meta name="google-signin-client_id"
         content="96550195453-uuol9trhtsvego1u8a43m4s0rqumd43b.apps.googleusercontent.com">
     <br><br>
@@ -60,11 +60,6 @@
             auth2.signOut().then(function () {
                 console.log('User signed out.');
             });
-        }
-        function greet()
-        {
-            // onSignIn();
-            alert(profile.getName());
         }
     </script>
 </body>
